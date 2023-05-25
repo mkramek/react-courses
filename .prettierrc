@@ -1,0 +1,8 @@
+{
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "endOfLine": "lf",
+    "arrowParens": "always",
+    "editorconfig": true,
+    "printWidth": 160
+}
