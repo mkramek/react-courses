@@ -30,6 +30,7 @@
         "@vitejs/plugin-react": "^3.0.0",
         "@vitest/coverage-c8": "^0.31.0",
         "@vitest/ui": "^0.31.0",
+        "cross-env": "^7.0.3",
         "cypress": "^12.11.0",
         "eslint": "~8.15.0",
         "eslint-config-prettier": "8.1.0",
@@ -38,6 +39,7 @@
         "eslint-plugin-jsx-a11y": "6.7.1",
         "eslint-plugin-react": "7.32.2",
         "eslint-plugin-react-hooks": "4.6.0",
+        "gh-pages": "^5.0.0",
         "jsdom": "~20.0.3",
         "nx": "16.2.2",
         "prettier": "^2.8.8",
@@ -47,5 +49,23 @@
         "vite-plugin-eslint": "^1.8.1",
         "vite-tsconfig-paths": "^4.0.2",
         "vitest": "^0.31.0"
+    },
+    "scripts": {
+        "deploy:gh:01": "nx build course-01 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-01",
+        "deploy:gh:02": "nx build course-02 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-02",
+        "deploy:gh:03": "nx build course-03 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-03",
+        "deploy:gh:04": "nx build course-04 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-04",
+        "deploy:gh:05": "nx build course-05 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-05",
+        "deploy:gh:06": "nx build course-06 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-06",
+        "deploy:gh:07": "nx build course-07 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-07",
+        "deploy:gh:08": "nx build course-08 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-08",
+        "deploy:gh:09": "nx build course-09 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-09",
+        "deploy:gh:00": "nx build course-10 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-10",
+        "deploy:gh:11": "nx build course-11 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-11",
+        "deploy:gh:12": "nx build course-12 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-12",
+        "deploy:gh:13": "nx build course-13 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-13",
+        "deploy:gh:14": "nx build course-14 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-14",
+        "deploy:gh:15": "nx build course-15 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-15",
+        "deploy:gh:16": "nx build course-16 --prod --baseHref=/react-courses/ && gh-pages -d dist/apps/course-16"
     }
 }
