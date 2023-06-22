@@ -1,38 +1,20 @@
-import React from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
+import React, { lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import SharedLayout from './components/SharedLayout';
+
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
 
 export function App() {
     return (
-        <div>
-            <div role="navigation">
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/page-2">Page 2</Link>
-                    </li>
-                </ul>
-            </div>
-            <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <div>
-                            This is the generated root route. <Link to="/page-2">Click here for page 2.</Link>
-                        </div>
-                    }
-                />
-                <Route
-                    path="/page-2"
-                    element={
-                        <div>
-                            <Link to="/">Click here to go back to root page.</Link>
-                        </div>
-                    }
-                />
-            </Routes>
-        </div>
+        <Routes>
+            <Route path="/" element={<SharedLayout />}>
+                <Route index element={<HomePage />} />
+                <Route path="about" element={<AboutPage />} />
+                <Route path="contact" element={<ContactPage />} />
+            </Route>
+        </Routes>
     );
 }
 export default App;

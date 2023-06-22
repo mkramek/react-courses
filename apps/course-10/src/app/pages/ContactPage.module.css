@@ -1,0 +1,6 @@
+.main {
+    min-height: 90vh;
+    width: calc(100% - 2rem);
+    background-color: lightgreen;
+    padding: .5rem 1rem;
+}

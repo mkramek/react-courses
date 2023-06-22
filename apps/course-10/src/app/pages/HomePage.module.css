@@ -1,0 +1,9 @@
+.main {
+    min-height: 90vh;
+    width: calc(100% - 2rem);
+    background-color: lightskyblue;
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}

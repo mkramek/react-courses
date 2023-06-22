@@ -1,0 +1,24 @@
+.main {
+    min-height: 90vh;
+    width: calc(100% - 2rem);
+    background-color: lightgoldenrodyellow;
+    padding: .5rem 1rem;
+}
+
+.section {
+    width: calc(100% - 2rem);
+    padding: .5rem 1rem;
+    height: 100vh;
+}
+
+.bgGreen {
+    background-color: lightgreen;
+}
+
+.bgGrey {
+    background-color: lightgray;
+}
+
+.bgCoral {
+    background-color: lightcoral;
+}

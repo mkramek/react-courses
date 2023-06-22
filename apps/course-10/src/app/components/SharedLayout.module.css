@@ -1,0 +1,16 @@
+.mainMenu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.menuItem {
+    color: black;
+    text-decoration: none;
+    border: 1px solid #aaa;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+}
