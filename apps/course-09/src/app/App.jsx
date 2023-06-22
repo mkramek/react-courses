@@ -1,38 +1,26 @@
-import React from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { About } from './pages/About';
+import { Home } from './pages/Home';
+import { ProductDetails } from './pages/ProductDetails';
+import { Products } from './pages/Products';
+import { Mission } from './components/Mission';
+import { Team } from './components/Team';
+import { Reviews } from './components/Reviews';
+import { SharedLayout } from './components/SharedLayout';
 
-export function App() {
+export const App = () => {
     return (
-        <div>
-            <div role="navigation">
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/page-2">Page 2</Link>
-                    </li>
-                </ul>
-            </div>
-            <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <div>
-                            This is the generated root route. <Link to="/page-2">Click here for page 2.</Link>
-                        </div>
-                    }
-                />
-                <Route
-                    path="/page-2"
-                    element={
-                        <div>
-                            <Link to="/">Click here to go back to root page.</Link>
-                        </div>
-                    }
-                />
-            </Routes>
-        </div>
+        <Routes>
+            <Route path="/" element={<SharedLayout />}>
+                <Route index element={<Home />} />
+                <Route path="about" element={<About />}>
+                    <Route path="mission" element={<Mission />} />
+                    <Route path="team" element={<Team />} />
+                    <Route path="reviews" element={<Reviews />} />
+                </Route>
+                <Route path="products" element={<Products />} />
+                <Route path="products/:productId" element={<ProductDetails />} />
+            </Route>
+        </Routes>
     );
-}
-export default App;
+};
