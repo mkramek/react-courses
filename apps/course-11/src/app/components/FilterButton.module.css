@@ -1,0 +1,11 @@
+.active {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+.inactive {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
